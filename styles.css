@@ -116,6 +116,7 @@ a{color:inherit;text-decoration:none;}
 .nav-toggle{
   display:none;flex-direction:column;gap:5px;
   background:none;border:none;cursor:pointer;padding:6px;
+  color:inherit;   /* herda a cor do cabeçalho, igual à logo */
 }
 .nav-toggle span{width:24px;height:2px;background:currentColor;transition:.3s ease;}
 .nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
