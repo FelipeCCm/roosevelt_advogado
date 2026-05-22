@@ -501,8 +501,15 @@ a{color:inherit;text-decoration:none;}
   .nav.is-open{transform:translateY(0);}
   .nav a{padding:15px 0;border-bottom:1px solid var(--rule);}
   .nav a:last-child{border-bottom:none;}
-  .nav__cta{
-    text-align:center;margin-top:14px;border-color:var(--navy);
+  .nav a.nav__cta{
+    display:block;
+    box-sizing:border-box;
+    width:100%;
+    margin-top:16px;
+    padding:16px 18px;
+    text-align:center;
+    text-indent:0;
+    border:1px solid var(--navy);
   }
   .nav a:not(.nav__cta)::after{display:none;}
   .nav-toggle{display:flex;}
