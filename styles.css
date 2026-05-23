@@ -266,6 +266,10 @@ a{color:inherit;text-decoration:none;}
   color:var(--muted);font-size:15.5px;line-height:1.8;
   margin-top:20px;max-width:52ch;
 }
+.sobre__oab{
+  margin-top:14px;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--navy);font-weight:500;
+}
 .sobre__facts{
   list-style:none;display:flex;gap:46px;margin-top:42px;flex-wrap:wrap;
 }

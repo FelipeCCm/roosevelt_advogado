@@ -6,7 +6,7 @@
    Número de WhatsApp que recebe as mensagens do formulário.
    Formato: código do país + DDD + número, somente dígitos.
    Ex.: Brasil (11) 91234-5678  ->  '5511912345678'              */
-const WHATSAPP_NUMERO = '5511900000000';
+const WHATSAPP_NUMERO = '5534988641998';
 
 /* ------------------------------------------------------------
    1. Hero — o nome "Roosevelt Advogado" some suavemente ao

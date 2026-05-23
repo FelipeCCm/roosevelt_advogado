@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Roosevelt Advogado — Identidade Visual</title>
-<meta name="viewport" content="width=1440" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -129,6 +129,84 @@
 
   /* FOOTER */
   footer{margin-top:88px;padding-top:24px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);}
+
+  /* ===================== MOBILE / TABLET ===================== */
+  @media (max-width:760px){
+    body{padding:32px 0 56px;}
+    .page{padding:0 20px;}
+
+    /* Header empilhado */
+    .doc-head{flex-direction:column;align-items:flex-start;gap:16px;}
+    .doc-head h1{font-size:30px;}
+    .doc-head .meta{text-align:left;}
+
+    /* Seções */
+    section{margin-top:52px;}
+    .section-label{gap:10px;margin-bottom:22px;}
+    .section-label .title{font-size:10px;letter-spacing:.2em;}
+
+    /* Marca principal — empilha as duas colunas */
+    .primary{grid-template-columns:1fr;gap:30px;padding:40px 22px;}
+    .primary .copy{padding-left:0;border-left:none;padding-top:30px;border-top:1px solid var(--rule);}
+    .primary .copy h2{font-size:27px;}
+    .primary .copy p{max-width:none;}
+    .wordmark .name{font-size:46px;}
+    .wordmark .sub{width:200px;}
+
+    /* Lockups — um por linha (a variação horizontal não cabe em 2 colunas) */
+    .lockups{grid-template-columns:1fr;gap:16px;}
+    .tile{aspect-ratio:16/10;padding:24px;}
+
+    /* Paleta — 2 colunas, rótulo empilhado */
+    .palette{grid-template-columns:repeat(2,1fr);gap:14px;}
+    .swatch .chip{height:120px;}
+    .swatch .meta{flex-direction:column;align-items:flex-start;gap:3px;}
+    .swatch .meta .name{font-size:16px;}
+
+    /* Tipografia — 1 coluna */
+    .type{grid-template-columns:1fr;}
+    .type .card{padding:28px 24px;}
+    .type .card .sample-serif{font-size:60px;}
+    .type .card .sample-sans{font-size:30px;}
+    .type .specimen{gap:12px;flex-wrap:wrap;}
+
+    /* Aplicações — 1 coluna, mesma proporção 16/10 dos demais quadros */
+    .apps{grid-template-columns:1fr;}
+    .card-mock,.seal-mock{aspect-ratio:16/10;}
+    .card-mock{padding:22px;}
+    .seal{width:150px;height:150px;}
+    .seal svg{width:66px;height:66px;}
+    .seal-inner .arc-top,.seal-inner .arc-bot{font-size:7px;letter-spacing:.32em;}
+    .seal-inner .arc-top{top:12px;}
+    .seal-inner .arc-bot{bottom:12px;}
+
+    /* Diretrizes — 2 colunas */
+    .grid-rules{grid-template-columns:repeat(2,1fr);}
+
+    footer{flex-direction:column;gap:8px;text-align:left;}
+  }
+
+  /* ===================== CELULARES ESTREITOS ===================== */
+  @media (max-width:400px){
+    .doc-head h1{font-size:26px;}
+    .type .card .sample-serif{font-size:50px;}
+    .type .card .sample-sans{font-size:25px;}
+    .card-mock{padding:18px;}
+    .seal{width:132px;height:132px;}
+    .seal svg{width:58px;height:58px;}
+  }
+
+  /* PRINT / PDF — preserva cores de fundo e evita cortes entre páginas */
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    @page{size:A4 portrait;margin:14mm;}
+    body{padding:0;}
+    .page{padding:0;max-width:100%;}
+    section{break-inside:avoid;page-break-inside:avoid;margin-top:48px;}
+    .tile,.swatch,.type .card,.card-mock,.seal-mock,.rule-tile,.primary{
+      break-inside:avoid;page-break-inside:avoid;
+    }
+  }
 </style>
 </head>
 <body>
@@ -414,11 +492,11 @@
           </div>
           <div class="bottom">
             <div>
-              <div class="person">Dr. Theodore Roosevelt</div>
+              <div class="person">Dr. Roosevelt João Marques</div>
               <div class="role">Advogado Titular · OAB / 000.000</div>
             </div>
             <div style="text-align:right;font-size:9px;letter-spacing:.22em;opacity:.85;line-height:1.7;">
-              CONTATO · 00 0000 0000<br/>ROOSEVELT.ADV.BR
+              CONTATO · 00 0000 0000<br/>ROOSEVELTADVOGADO.COM.BR
             </div>
           </div>
         </div>
@@ -512,7 +590,6 @@
 
   <footer>
     <div>Roosevelt Advogado · Identidade Visual</div>
-    <div>Sanchez Advocacia · Estudo de Marca · 2026</div>
   </footer>
 
 </div>

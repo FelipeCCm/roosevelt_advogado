@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -f _test390.html _vwtest.html)",
+      "Read(//c/c/Users/T-GAMER/Documents/Projetos/**)"
+    ]
+  }
+}
